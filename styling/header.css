@@ -1,0 +1,103 @@
+header{
+    background-color: rgb(3, 18, 70);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0; 
+    width: 80%;
+    align-items: center;
+}
+
+
+nav ul li a{
+    padding: 1rem 4rem 1rem;
+    border-radius: 5px;
+    color: rgb(230, 238, 255);
+    font-size: 1.2rem;
+
+}
+
+nav ul li a.active {
+    background-color: #fdfdff12;
+}
+
+nav a{
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+nav img{
+    width: auto;
+    height: auto;
+    max-height: 7vh;
+    min-height: 5vh;
+}
+
+.navbar-gradient{
+    padding-left: 1rem;
+    text-align: center;
+    background: linear-gradient(to right, rgb(36 96 240) 20%, rgb(36 96 240) 40%, rgb(255 255 255) 60%, rgb(17 110 175) 80%);
+    background-size: 200% auto;
+    color: rgb(0, 0, 0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite;
+}
+
+.exit-hamburger{
+    display: none;
+}
+
+
+
+@keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+}
+
+@media (max-width: 970px) {
+    nav ul li a {
+        padding: 1rem 1rem 1rem;
+    }
+}
+@media (max-width: 600px) {
+
+    .exit-hamburger{
+        display: block;
+    }
+   
+   .wrapper-hamburger a{
+    color: white;
+    background-color: #152353;
+    padding: 1rem 1rem 1rem;
+   }
+
+   .wrapper-hamburger{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   }
+
+    nav{
+        flex-direction: column;
+        height: 20vh;
+    }
+
+    nav ul{
+        flex-direction: column;
+        height: 100%;
+    }
+  }
